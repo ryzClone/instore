@@ -1,0 +1,77 @@
+.header-slider {
+  height: 880px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  margin-bottom: 50px;
+}
+.header-content div{
+  width: 760px;
+  font-size: 48px;
+  color: #fb6c00;
+  margin-bottom: 15px;
+}
+.header-content button{
+  background-color: #fb6c00;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.header-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.prev-buttons {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0px 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.prev-buttons button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.prev-view {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  /* or set your desired width */
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.prev-view span{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
