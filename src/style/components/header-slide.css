@@ -15,7 +15,7 @@
   margin-bottom: 50px;
 }
 .header-content div{
-  width: 760px;
+  width: 900px;
   font-size: 48px;
   color: #fb6c00;
   margin-bottom: 15px;
@@ -27,6 +27,7 @@
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .header-slider::after {
