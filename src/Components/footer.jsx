@@ -16,10 +16,14 @@ export default function Footer() {
 
           <div className="footer-body-bottom">
             <div className="footer-body-bottom-title">
-              <span>Телефон:</span> +99890 006 70 00
+              <span>Телефон:</span>{" "}
+              <a href="tel:+998900067000">+99890 006 70 00</a>
             </div>
             <div className="footer-body-bottom-text">
-              <span>E-mail: </span> ABokizhonov1998@mail.ru
+              <span>E-mail: </span>{" "}
+              <a href="mailto:ABokizhonov1998@mail.ru">
+                ABokizhonov1998@mail.ru
+              </a>
             </div>
           </div>
         </div>

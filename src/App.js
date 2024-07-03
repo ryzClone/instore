@@ -2,6 +2,7 @@ import BeautifulCard from "./Components/beautiful-block";
 import Delivery from "./Components/delivery";
 import Footer from "./Components/footer";
 import HeaderSlider from "./Components/header-slider";
+import Modal from "./Components/modal";
 import Product from "./Components/product";
 import scrollUp from "./Image/png/scrollUpPng.png";
 

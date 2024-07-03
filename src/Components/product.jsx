@@ -1,36 +1,28 @@
 import React, { useEffect, useState } from "react";
 import "../style/components/product.css";
 import { product, product2, product3 } from "../Base/product";
+import FullScreenModal from "./modal";
 
 export default function Product() {
-  const [activeIndex, setActiveIndex] = useState(0); // State to track active index
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [modalActive, setModalActive] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const productsArray = [product, product2, product3];
 
   useEffect(() => {
     ProductBase();
   }, [activeIndex]);
 
   function ProductBase() {
-    let data = []; // Initialize data as an empty array
-    switch (activeIndex) {
-      case 0:
-        data = product;
-        break;
-      case 1:
-        data = product2;
-        break;
-      case 2:
-        data = product3;
-        break;
-      default:
-        break;
-    }
+    const data = productsArray[activeIndex];
     ProductView(data);
   }
 
   function ProductView(data) {
     const Product = document.querySelector(".product");
     Product.innerHTML = "";
-    data.forEach((element) => {
+    data.forEach((element, index) => {
       const productBody = document.createElement("div");
       const productBodyImg = document.createElement("img");
       const productBodyTitle = document.createElement("div");
@@ -51,16 +43,24 @@ export default function Product() {
       productBody.appendChild(productBodyTitle);
       productBody.appendChild(productBodyText);
 
+      productBody.addEventListener("click", () => handleProductClick(element));
+
       Product.appendChild(productBody);
     });
   }
 
   const handleToggleActive = (index) => {
-    if (activeIndex === index) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
+    setActiveIndex(index);
+  };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setModalActive(true);
+  };
+
+  const closeModal = () => {
+    setModalActive(false);
+    setSelectedProduct(null);
   };
 
   return (
@@ -87,6 +87,13 @@ export default function Product() {
           </span>
         </div>
         <div className="product"></div>
+        {selectedProduct && (
+          <FullScreenModal
+            isActive={modalActive}
+            onClose={closeModal}
+            product={selectedProduct}
+          />
+        )}
       </div>
     </div>
   );

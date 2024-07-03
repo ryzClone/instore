@@ -44,6 +44,10 @@
     justify-content: center;
     gap: 5px;
 }
+.footer-body-bottom a{
+    color: white;
+    text-decoration: none;
+}
 .footer-body-bottom-title{
     color: #fff;
     font-family: 'TildaSans', Arial, sans-serif;
