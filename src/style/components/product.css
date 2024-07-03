@@ -12,10 +12,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .product {
+  margin: 0px 260px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -32,6 +33,14 @@
   margin: 10px;
   text-align: center;
   cursor: pointer;
+}
+@media (max-width:1500px) {
+  .product {
+    margin: 0 100px;
+  }
+  .productBody{
+    width: 300px;
+  }
 }
 
 .productBody:hover {
