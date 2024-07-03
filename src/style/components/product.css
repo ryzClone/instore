@@ -65,3 +65,65 @@
   padding: 10px;
   color: #666;
 }
+/* product.css */
+.category-product {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-product span {
+  margin: 26px 15px 0 6px;
+  border: 1px solid #d6d6d6;
+  width: 155px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-product span::before,
+.category-product span::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border: 1px solid #fb6c00;
+  transition: all 1s ease;
+}
+
+.category-product span::before {
+  top: 0;
+  left: 0;
+}
+
+.category-product span::after {
+  bottom: 0;
+  right: 0;
+}
+
+.category-product span.active {
+  background-color: #fb6c00;
+  border-color: transparent;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  color: white;
+}
+
+.category-product span:hover::before,
+.category-product span:hover::after {
+  width: 100%;
+}
+
+.category-product span:hover {
+  border-color: transparent;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
