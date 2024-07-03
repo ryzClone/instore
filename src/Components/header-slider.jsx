@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../style/components/header-slide.css";
 
-import img1 from "../Image/img/header-slider/lineage 1.jpg";
-import img2 from "../Image/img/header-slider/lineage 2.jpg";
+import img1 from "../Image/img/header-slider/lineage 22.jpg";
+import img2 from "../Image/img/header-slider/lineage 11.jpg";
 
 export default function HeaderSlider() {
   const [currentImage, setCurrentImage] = useState(1);
