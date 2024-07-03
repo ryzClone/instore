@@ -19,6 +19,8 @@
   font-size: 48px;
   color: #fb6c00;
   margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .header-content button{
   position: relative;
